@@ -97,45 +97,20 @@
     CGFloat x = (hMargin + width) * (index % allCols);
     CGFloat y = (vMargin + height) * (index/allCols);
     
-    /* move to PHWBucketView.m
-    // ****** Create Item and add to bucket
-    // create itemviews
-    UIView *shopView = [[UIView alloc] init];
-    // setup frame
-    shopView.frame = CGRectMake(x, y, width, height);
-    // background color
-    shopView.backgroundColor = [UIColor greenColor];
-    // add to bucket
-    [self.bucketView addSubview:shopView];
     
     
-    // add image
-    UIImageView *iconView = [[UIImageView alloc] init];
-    iconView.frame = CGRectMake(0, 0, width, width);
-    iconView.backgroundColor = [UIColor blueColor];
-    [shopView addSubview:iconView];
-    
-    // add lable
-    UILabel *itemLabel = [[UILabel alloc] init];
-    itemLabel.frame = CGRectMake(0, width, width, height-width);
-    itemLabel.backgroundColor = [UIColor yellowColor];
-    itemLabel.textAlignment = NSTextAlignmentCenter;
-    [shopView addSubview:itemLabel];
-    */
-    PHWBucketView *shopView = [[PHWBucketView alloc] init];
-    shopView.frame = CGRectMake(x, y, width, height);
-    [self.bucketView addSubview:shopView];
-    
+//    PHWBucketView *shopView = [[PHWBucketView alloc] init];
     // ******** setup data
-
-    //assign data
-    
     Bucket *item = self.dataArr[index];
-//    shopView.iconView.image = [UIImage imageNamed:item.icon];
-//    shopView.itemLabel.text = item.name;
-    [shopView setIcon:item.icon];
-    [shopView setName:item.name];
+//    shopView.bucketItem = item;
+//    [self.bucketView addSubview:shopView];
     
+    PHWBucketView *shopView = [PHWBucketView bucketViewWithBucket:item];
+    shopView.frame = CGRectMake(x, y, width, height);
+
+    [self.bucketView addSubview:shopView];
+    
+
     
     
     // ****** setup add button status

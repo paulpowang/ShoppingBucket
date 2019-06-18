@@ -7,6 +7,7 @@
 //
 
 #import "PHWBucketView.h"
+#import "Bucket.h"
 @interface PHWBucketView()
 @property (nonatomic, weak) UIImageView *iconView;
 @property (nonatomic, weak) UILabel *itemLabel;
@@ -25,26 +26,9 @@
  */
 - (instancetype) init{
     if (self == [super init]){
-        //
-//
-//        CGFloat width = self.frame.size.width;
-//        CGFloat height = self.frame.size.height;
+      
+        [self setUp];
         
-        
-        // add image
-        UIImageView *iconView = [[UIImageView alloc] init];
-//        iconView.frame = CGRectMake(0, 0, width, width);
-        iconView.backgroundColor = [UIColor blueColor];
-        [self addSubview:iconView];
-        self.iconView = iconView;
-        
-        // add lable
-        UILabel *itemLabel = [[UILabel alloc] init];
-//        itemLabel.frame = CGRectMake(0, width, width, height-width);
-        itemLabel.backgroundColor = [UIColor yellowColor];
-        itemLabel.textAlignment = NSTextAlignmentCenter;
-        [self addSubview:itemLabel];
-        self.itemLabel = itemLabel;
     }
     return self;
 }
@@ -70,6 +54,50 @@
 }
 - (void)setName:(NSString *)name{
     self.itemLabel.text = name;
+}
+
+
+/**
+ set function: for set up bucket item
+
+ @param bucket <#bucket description#>
+ */
+- (void)setBucketItem:(Bucket *)bucketItem{
+    _bucketItem = bucketItem;
+    
+    // setup data
+    self.iconView.image = [UIImage imageNamed:bucketItem.icon];
+    self.itemLabel.text = bucketItem.name;
+}
+
+- (instancetype)initWithBucket:(Bucket *)bucket{
+    if (self == [super init]){
+        
+        [self setUp];
+        self.bucketItem = bucket;
+    }
+    return self;
+}
++ (instancetype)bucketViewWithBucket:(Bucket *)bucket{
+    return [[self alloc] initWithBucket:bucket];
+}
+
+/**
+ initialize setup
+ */
+- (void) setUp{
+    // add image
+    UIImageView *iconView = [[UIImageView alloc] init];
+    iconView.backgroundColor = [UIColor blueColor];
+    [self addSubview:iconView];
+    self.iconView = iconView;
+    
+    // add lable
+    UILabel *itemLabel = [[UILabel alloc] init];
+    itemLabel.backgroundColor = [UIColor yellowColor];
+    itemLabel.textAlignment = NSTextAlignmentCenter;
+    [self addSubview:itemLabel];
+    self.itemLabel = itemLabel;
 }
 
 @end
