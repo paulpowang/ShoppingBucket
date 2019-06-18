@@ -8,7 +8,8 @@
 
 #import "PHWBucketView.h"
 @interface PHWBucketView()
-
+@property (nonatomic, weak) UIImageView *iconView;
+@property (nonatomic, weak) UILabel *itemLabel;
 
 @end
 
@@ -62,6 +63,13 @@
     // setup subview frame
     self.iconView.frame = CGRectMake(0, 0, width, width);
     self.itemLabel.frame = CGRectMake(0, width, width, height-width);
+}
+
+- (void)setIcon:(NSString *)icon{
+    self.iconView.image = [UIImage imageNamed:icon];
+}
+- (void)setName:(NSString *)name{
+    self.itemLabel.text = name;
 }
 
 @end

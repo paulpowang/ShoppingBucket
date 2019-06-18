@@ -131,8 +131,10 @@
     //assign data
     
     Bucket *item = self.dataArr[index];
-    shopView.iconView.image = [UIImage imageNamed:item.icon];
-    shopView.itemLabel.text = item.name;
+//    shopView.iconView.image = [UIImage imageNamed:item.icon];
+//    shopView.itemLabel.text = item.name;
+    [shopView setIcon:item.icon];
+    [shopView setName:item.name];
     
     
     

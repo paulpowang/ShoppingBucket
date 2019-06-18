@@ -11,8 +11,14 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface PHWBucketView : UIView
-@property (nonatomic, weak) UIImageView *iconView;
-@property (nonatomic, weak) UILabel *itemLabel;
+//@property (nonatomic, weak) UIImageView *iconView;
+//@property (nonatomic, weak) UILabel *itemLabel;
+
+// interface function
+- (void)setIcon: (NSString *) icon;
+- (void)setName: (NSString *) name;
+
+
 @end
 
 NS_ASSUME_NONNULL_END
