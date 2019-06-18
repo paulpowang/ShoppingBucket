@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "Bucket.h"
+#import "PHWBucketView.h"
 
 @interface ViewController ()
 
@@ -96,7 +97,7 @@
     CGFloat x = (hMargin + width) * (index % allCols);
     CGFloat y = (vMargin + height) * (index/allCols);
     
-    
+    /* move to PHWBucketView.m
     // ****** Create Item and add to bucket
     // create itemviews
     UIView *shopView = [[UIView alloc] init];
@@ -106,6 +107,7 @@
     shopView.backgroundColor = [UIColor greenColor];
     // add to bucket
     [self.bucketView addSubview:shopView];
+    
     
     // add image
     UIImageView *iconView = [[UIImageView alloc] init];
@@ -119,29 +121,18 @@
     itemLabel.backgroundColor = [UIColor yellowColor];
     itemLabel.textAlignment = NSTextAlignmentCenter;
     [shopView addSubview:itemLabel];
+    */
+    PHWBucketView *shopView = [[PHWBucketView alloc] init];
+    shopView.frame = CGRectMake(x, y, width, height);
+    [self.bucketView addSubview:shopView];
+    
     // ******** setup data
-//    iconView.image = [UIImage imageNamed:@"cherry"];
-//    itemLabel.text = @"cherry";
-//
-//
-//    if (index == 0){
-//        [UIImage imageNamed:@"cherry"];
-//        itemLabel.text = @"cherry";
-//    }
-    /*
-    NSArray<NSDictionary *> *dataArr = @[
-                                         @{@"name":@"cherry", @"icon":@"cherry"},
-                                         @{@"name":@"windmill", @"icon":@"windmill"},
-                                         @{@"name":@"strawberry", @"icon":@"strawberry"},
-                                         @{@"name":@"raspberry", @"icon":@"raspberry"},
-                                         @{@"name":@"grapes", @"icon":@"grapes"},
-                                         @{@"name":@"champagne", @"icon":@"champagne"}
-                                         
-                                         ];*/
+
     //assign data
+    
     Bucket *item = self.dataArr[index];
-    iconView.image = [UIImage imageNamed:item.icon];
-    itemLabel.text = item.name;
+    shopView.iconView.image = [UIImage imageNamed:item.icon];
+    shopView.itemLabel.text = item.name;
     
     
     

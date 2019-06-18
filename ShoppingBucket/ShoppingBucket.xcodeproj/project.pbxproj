@@ -17,6 +17,7 @@
 		DAFE7EB922B7FBAE00A13051 /* ShoppingBucketUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = DAFE7EB822B7FBAE00A13051 /* ShoppingBucketUITests.m */; };
 		DAFE7ECB22B8724400A13051 /* Bucket.m in Sources */ = {isa = PBXBuildFile; fileRef = DAFE7ECA22B8724400A13051 /* Bucket.m */; };
 		DAFE7F2122B87BEF00A13051 /* shopData.plist in Resources */ = {isa = PBXBuildFile; fileRef = DAFE7F2022B87BEF00A13051 /* shopData.plist */; };
+		DAFE7F2422B8A13700A13051 /* PHWBucketView.m in Sources */ = {isa = PBXBuildFile; fileRef = DAFE7F2322B8A13700A13051 /* PHWBucketView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,8 @@
 		DAFE7EC922B8724400A13051 /* Bucket.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Bucket.h; sourceTree = "<group>"; };
 		DAFE7ECA22B8724400A13051 /* Bucket.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Bucket.m; sourceTree = "<group>"; };
 		DAFE7F2022B87BEF00A13051 /* shopData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = shopData.plist; sourceTree = "<group>"; };
+		DAFE7F2222B8A13700A13051 /* PHWBucketView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PHWBucketView.h; sourceTree = "<group>"; };
+		DAFE7F2322B8A13700A13051 /* PHWBucketView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PHWBucketView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +111,8 @@
 			children = (
 				DAFE7E9422B7FBAC00A13051 /* AppDelegate.h */,
 				DAFE7E9522B7FBAC00A13051 /* AppDelegate.m */,
+				DAFE7F2222B8A13700A13051 /* PHWBucketView.h */,
+				DAFE7F2322B8A13700A13051 /* PHWBucketView.m */,
 				DAFE7E9722B7FBAC00A13051 /* ViewController.h */,
 				DAFE7E9822B7FBAC00A13051 /* ViewController.m */,
 				DAFE7EC922B8724400A13051 /* Bucket.h */,
@@ -275,6 +280,7 @@
 				DAFE7ECB22B8724400A13051 /* Bucket.m in Sources */,
 				DAFE7EA422B7FBAE00A13051 /* main.m in Sources */,
 				DAFE7E9622B7FBAC00A13051 /* AppDelegate.m in Sources */,
+				DAFE7F2422B8A13700A13051 /* PHWBucketView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
