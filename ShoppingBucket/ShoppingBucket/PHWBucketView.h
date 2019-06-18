@@ -13,12 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 @class Bucket;
 
 @interface PHWBucketView : UIView
-//@property (nonatomic, weak) UIImageView *iconView;
-//@property (nonatomic, weak) UILabel *itemLabel;
 
-// interface function
-//- (void)setIcon: (NSString *) icon;
-//- (void)setName: (NSString *) name;
 @property (nonatomic,strong) Bucket *bucketItem;
 
 - (instancetype) initWithBucket: (Bucket *) bucket;

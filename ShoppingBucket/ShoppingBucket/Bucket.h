@@ -16,10 +16,6 @@ NS_ASSUME_NONNULL_BEGIN
 // lable text
 @property (nonatomic, copy) NSString *name;
 
-
-// constructor
-//- (instancetype) initWithIcon: (NSString *)icon name: (NSString *) name;
-//+ (instancetype) shopWithIcon: (NSString *)icon name: (NSString *) name;
 - (instancetype)initWithDict:(NSDictionary *) dict;
 + (instancetype) shopWithDict:(NSDictionary *) dict;
 

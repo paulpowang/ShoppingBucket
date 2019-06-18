@@ -38,9 +38,7 @@
 
         // turn dictionary into model
         for (NSDictionary *dict in self.dataArr){
-//            Bucket *newbucket = [[Bucket alloc] initWithIcon:dict[@"icon"] name:dict[@"name"]];
-//            newbucket.name = dict[@"name"];
-//            newbucket.icon = dict[@"icon"];
+
             // add model into temp array
             Bucket *bucketItem = [Bucket shopWithDict:dict];
             [tempArr addObject:bucketItem];
@@ -56,21 +54,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-//    self.index = 0;
-    
-//    // deal with item overflow
-//    self.bucketView.clipsToBounds = true;
-    
-//    NSArray<NSDictionary *> *dataArr = @[
-//                                         @{@"name":@"cherry", @"icon":@"cherry"},
-//                                         @{@"name":@"windmill", @"icon":@"windmill"},
-//                                         @{@"name":@"strawberry", @"icon":@"strawberry"},
-//                                         @{@"name":@"raspberry", @"icon":@"raspberry"},
-//                                         @{@"name":@"grapes", @"icon":@"grapes"},
-//                                         @{@"name":@"champagne", @"icon":@"champagne"}
-//                                         
-//                                         ];
-//    self.dataArr = dataArr;
 }
 
 
@@ -97,22 +80,12 @@
     CGFloat x = (hMargin + width) * (index % allCols);
     CGFloat y = (vMargin + height) * (index/allCols);
     
-    
-    
-//    PHWBucketView *shopView = [[PHWBucketView alloc] init];
     // ******** setup data
     Bucket *item = self.dataArr[index];
-//    shopView.bucketItem = item;
-//    [self.bucketView addSubview:shopView];
-    
     PHWBucketView *shopView = [PHWBucketView bucketViewWithBucket:item];
     shopView.frame = CGRectMake(x, y, width, height);
-
     [self.bucketView addSubview:shopView];
-    
 
-    
-    
     // ****** setup add button status
     if (index == 5){
         button.enabled = false;
@@ -120,10 +93,7 @@
     
     // **** setup remove button status
     self.removeButton.enabled = true;
-    
-    
-    // add 1 to index
-//    self.index += 1;
+
 }
 
 /**
