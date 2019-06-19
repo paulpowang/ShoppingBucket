@@ -8,7 +8,8 @@
 
 #import "ViewController.h"
 #import "Bucket.h"
-#import "PHWBucketView.h"
+//#import "PHWBucketView.h"
+#import "PHWShopView.h"
 
 @interface ViewController ()
 
@@ -82,8 +83,10 @@
     
     // ******** setup data
     Bucket *item = self.dataArr[index];
-    PHWBucketView *shopView = [PHWBucketView bucketViewWithBucket:item];
+//    PHWBucketView *shopView = [PHWBucketView bucketViewWithBucket:item];
+    PHWShopView *shopView = [PHWShopView shopView];
     shopView.frame = CGRectMake(x, y, width, height);
+    shopView.shop = self.dataArr[index];
     [self.bucketView addSubview:shopView];
 
     // ****** setup add button status

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DAF9E75522B9D765004C37A2 /* PHWShopView.m in Sources */ = {isa = PBXBuildFile; fileRef = DAF9E75422B9D765004C37A2 /* PHWShopView.m */; };
+		DAF9E75722B9D783004C37A2 /* PHWShopView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DAF9E75622B9D783004C37A2 /* PHWShopView.xib */; };
 		DAFE7E9622B7FBAC00A13051 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DAFE7E9522B7FBAC00A13051 /* AppDelegate.m */; };
 		DAFE7E9922B7FBAC00A13051 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAFE7E9822B7FBAC00A13051 /* ViewController.m */; };
 		DAFE7E9C22B7FBAC00A13051 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAFE7E9A22B7FBAC00A13051 /* Main.storyboard */; };
@@ -38,6 +40,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DAF9E75322B9D765004C37A2 /* PHWShopView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PHWShopView.h; sourceTree = "<group>"; };
+		DAF9E75422B9D765004C37A2 /* PHWShopView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PHWShopView.m; sourceTree = "<group>"; };
+		DAF9E75622B9D783004C37A2 /* PHWShopView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PHWShopView.xib; sourceTree = "<group>"; };
 		DAFE7E9122B7FBAC00A13051 /* ShoppingBucket.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShoppingBucket.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAFE7E9422B7FBAC00A13051 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		DAFE7E9522B7FBAC00A13051 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -123,6 +128,9 @@
 				DAFE7EA222B7FBAE00A13051 /* Info.plist */,
 				DAFE7F2022B87BEF00A13051 /* shopData.plist */,
 				DAFE7EA322B7FBAE00A13051 /* main.m */,
+				DAF9E75322B9D765004C37A2 /* PHWShopView.h */,
+				DAF9E75422B9D765004C37A2 /* PHWShopView.m */,
+				DAF9E75622B9D783004C37A2 /* PHWShopView.xib */,
 			);
 			path = ShoppingBucket;
 			sourceTree = "<group>";
@@ -249,6 +257,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DAFE7F2122B87BEF00A13051 /* shopData.plist in Resources */,
+				DAF9E75722B9D783004C37A2 /* PHWShopView.xib in Resources */,
 				DAFE7EA122B7FBAE00A13051 /* LaunchScreen.storyboard in Resources */,
 				DAFE7E9E22B7FBAE00A13051 /* Assets.xcassets in Resources */,
 				DAFE7E9C22B7FBAC00A13051 /* Main.storyboard in Resources */,
@@ -280,6 +289,7 @@
 				DAFE7ECB22B8724400A13051 /* Bucket.m in Sources */,
 				DAFE7EA422B7FBAE00A13051 /* main.m in Sources */,
 				DAFE7E9622B7FBAC00A13051 /* AppDelegate.m in Sources */,
+				DAF9E75522B9D765004C37A2 /* PHWShopView.m in Sources */,
 				DAFE7F2422B8A13700A13051 /* PHWBucketView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
