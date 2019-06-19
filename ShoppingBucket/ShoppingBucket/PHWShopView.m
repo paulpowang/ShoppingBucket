@@ -29,7 +29,7 @@
     
 }
 + (instancetype)shopView{
-    return [[[NSBundle mainBundle] loadNibNamed:@"PHWShopView" owner:nil options:nil] firstObject];
+    return [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass(self) owner:nil options:nil] firstObject];
 }
 
 
